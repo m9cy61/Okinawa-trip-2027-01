@@ -1,671 +1,628 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>沖繩 2027｜拔拔跟姊姊的小旅行</title>
+  <title>沖繩 2027｜爸爸 × 姊姊 × 九日</title>
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* =========================
-   基本設定
-========================= */
+    :root {
+      --brown: #70432c;
+      --orange: #c86f35;
+      --cream: #fff8e9;
+      --cream-dark: #f8ebcf;
+      --green: #eaf2df;
+      --yellow: #fff0b8;
+      --text: #49372d;
+      --white: #ffffff;
+    }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family:
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
         "Noto Sans TC",
         "Microsoft JhengHei",
         sans-serif;
 
-    background:
-        linear-gradient(180deg, #fffaf0 0%, #f7f1df 100%);
-
-    color: #5a3928;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-/* =========================
-   整體容器
-========================= */
-
-.container {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-}
-
-/* =========================
-   HERO 封面
-========================= */
-
-.hero {
-    min-height: 560px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
-
-    padding: 70px 0 60px;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.small-title {
-    font-size: 25px;
-    font-weight: 800;
-
-    color: #7b492c;
-
-    margin-bottom: 25px;
-}
-
-.small-title span {
-    margin-right: 8px;
-}
-
-.hero h1 {
-    font-size: clamp(58px, 9vw, 105px);
-
-    line-height: 1;
-
-    letter-spacing: 3px;
-
-    color: #713f28;
-
-    margin-bottom: 15px;
-
-    font-weight: 900;
-}
-
-.hero h2 {
-    font-size: clamp(42px, 6vw, 72px);
-
-    line-height: 1.1;
-
-    color: #c76f38;
-
-    margin-bottom: 30px;
-
-    font-weight: 900;
-}
-
-.subtitle {
-    font-size: 25px;
-
-    font-weight: 800;
-
-    color: #69422d;
-
-    margin-bottom: 28px;
-}
-
-.date-badge {
-    display: inline-block;
-
-    background: #ffffff;
-
-    padding: 13px 24px;
-
-    border-radius: 50px;
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    box-shadow: 0 8px 25px rgba(110, 75, 45, 0.12);
-}
-
-/* =========================
-   九日封面照片
-========================= */
-
-.hero-dog {
-    width: 390px;
-    min-width: 390px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-dog-frame {
-    width: 360px;
-    height: 360px;
-
-    background: #ffffff;
-
-    border-radius: 45% 55% 50% 50% / 48% 45% 55% 52%;
-
-    padding: 15px;
-
-    box-shadow:
-        0 15px 40px rgba(100, 65, 40, 0.18);
-
-    overflow: hidden;
-
-    transform: rotate(2deg);
-}
-
-.hero-dog img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    border-radius: 40% 60% 50% 50% / 45% 45% 55% 55%;
-
-    transform: rotate(-2deg);
-}
-
-/* =========================
-   九日小提醒
-========================= */
-
-.dog-note {
-    background: #fff3d8;
-
-    border: 2px dashed #d99959;
-
-    border-radius: 25px;
-
-    padding: 25px 30px;
-
-    margin: 15px 0 40px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-.dog-note-image {
-    width: 120px;
-    height: 120px;
-
-    flex-shrink: 0;
-
-    background: #fff;
-
-    border-radius: 25px;
-
-    overflow: hidden;
-
-    box-shadow: 0 5px 15px rgba(100, 60, 30, 0.12);
-}
-
-.dog-note-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-.dog-note-text h3 {
-    font-size: 28px;
-
-    color: #7b492c;
-
-    margin-bottom: 5px;
-}
-
-.dog-note-text p {
-    font-size: 21px;
-
-    font-weight: 600;
-
-    color: #694b38;
-}
-
-/* =========================
-   TAB
-========================= */
-
-.tabs {
-    display: flex;
-
-    gap: 10px;
-
-    overflow-x: auto;
-
-    padding: 10px 5px 18px;
-
-    margin-top: 10px;
-
-    scrollbar-width: thin;
-}
-
-.tab {
-    flex: 0 0 auto;
-
-    border: none;
-
-    background: #ead7bd;
-
-    color: #70482f;
-
-    padding: 16px 22px;
-
-    border-radius: 18px;
-
-    font-size: 20px;
-
-    font-weight: 900;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.tab:hover {
-    transform: translateY(-2px);
-}
-
-.tab.active {
-    background: #c8753d;
-
-    color: #ffffff;
-
-    box-shadow: 0 7px 18px rgba(170, 95, 45, 0.25);
-}
-
-/* =========================
-   每日內容
-========================= */
-
-.day-content {
-    display: none;
-
-    background: #ffffff;
-
-    border-radius: 30px;
-
-    padding: 40px;
-
-    margin-bottom: 50px;
-
-    box-shadow:
-        0 10px 35px rgba(100, 70, 40, 0.09);
-
-    border: 1px solid #f1dfc5;
-
-    animation: fadeIn 0.25s ease;
-}
-
-.day-content.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
+      background:
+        linear-gradient(
+          180deg,
+          #fffaf0 0%,
+          #fffdf8 45%,
+          #f7f1df 100%
+        );
+
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.8;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.day-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 25px;
-}
-
-.day-title .date {
-    background: #c8753d;
-
-    color: white;
-
-    border-radius: 15px;
-
-    padding: 8px 15px;
-
-    font-size: 20px;
-
-    font-weight: 900;
-}
-
-.day-title h2 {
-    font-size: 32px;
-
-    color: #70442d;
-}
-
-.intro {
-    background: #fff7e9;
-
-    border-left: 6px solid #d89555;
-
-    border-radius: 10px;
-
-    padding: 18px 22px;
-
-    margin-bottom: 30px;
-
-    font-size: 21px;
-
-    font-weight: 600;
-}
-
-/* =========================
-   行程時間軸
-========================= */
-
-.timeline {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-.timeline-item {
-    display: grid;
-
-    grid-template-columns: 105px 1fr;
-
-    gap: 20px;
-
-    align-items: start;
-}
-
-.time {
-    font-size: 21px;
-
-    font-weight: 900;
-
-    color: #c56d37;
-
-    padding-top: 4px;
-}
-
-.activity {
-    background: #faf5ea;
-
-    border-radius: 18px;
-
-    padding: 18px 22px;
-
-    border: 1px solid #f0dfc5;
-}
-
-.activity h3 {
-    font-size: 24px;
-
-    color: #6e442d;
-
-    margin-bottom: 5px;
-}
-
-.activity p {
-    font-size: 19px;
-
-    color: #6b5647;
-}
-
-/* =========================
-   KLOOK 按鈕
-========================= */
-
-.klook-btn {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 13px 22px;
-
-    background: #d96d35;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    border-radius: 12px;
-
-    font-size: 19px;
-
-    font-weight: 900;
-
-    transition: 0.2s;
-}
-
-.klook-btn:hover {
-    background: #b95322;
-
-    transform: translateY(-2px);
-}
-
-/* =========================
-   購物區
-========================= */
-
-.shopping {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-
-    margin-top: 15px;
-}
-
-.shop-card {
-    background: #fffaf0;
-
-    border: 1px solid #efd9b9;
-
-    border-radius: 18px;
-
-    padding: 20px;
-}
-
-.shop-card h3 {
-    font-size: 22px;
-
-    color: #71452f;
-
-    margin-bottom: 5px;
-}
-
-.shop-card p {
-    font-size: 18px;
-
-    color: #685345;
-}
-
-/* =========================
-   九日卡片
-========================= */
-
-.home-card {
-    margin-top: 25px;
-
-    background: #f5ead9;
-
-    border-radius: 25px;
-
-    padding: 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-.home-card img {
-    width: 150px;
-    height: 150px;
-
-    object-fit: contain;
-
-    background: white;
-
-    border-radius: 25px;
-}
-
-.home-card h3 {
-    font-size: 28px;
-
-    color: #70442c;
-
-    margin-bottom: 5px;
-}
-
-.home-card p {
-    font-size: 20px;
-
-    font-weight: 600;
-
-    color: #644d3e;
-}
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-    text-align: center;
-
-    padding: 50px 20px 70px;
-
-    color: #8b6a52;
-
-    font-size: 18px;
-}
-
-footer strong {
-    color: #70442c;
-}
-
-/* =========================
-   手機版
-========================= */
-
-@media (max-width: 800px) {
-
-    body {
-        font-size: 17px;
-    }
+    /* =========================
+       Hero
+    ========================= */
 
     .hero {
-        flex-direction: column;
+      min-height: 470px;
+      padding: 45px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
 
-        text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #fff0d2 0%,
+          #fffaf0 50%,
+          #edf3e5 100%
+        );
 
-        padding-top: 45px;
-
-        gap: 30px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-dog {
-        width: 100%;
-        min-width: 0;
+    .hero::before {
+      content: "🐾";
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.08;
+      right: 40%;
+      bottom: -30px;
     }
 
-    .hero-dog-frame {
-        width: 300px;
-        height: 300px;
+    .hero-text {
+      max-width: 680px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 15px;
+    }
+
+    .small-title::before {
+      content: "🐕";
+      margin-right: 8px;
     }
 
     .hero h1 {
-        font-size: 62px;
+      font-size: clamp(58px, 9vw, 100px);
+      line-height: 0.95;
+      letter-spacing: 3px;
+      color: var(--brown);
+      margin-bottom: 12px;
+      font-weight: 900;
     }
 
     .hero h2 {
-        font-size: 45px;
+      font-size: clamp(42px, 6vw, 68px);
+      color: var(--orange);
+      margin-bottom: 25px;
+      line-height: 1.1;
+      font-weight: 900;
     }
 
     .subtitle {
-        font-size: 21px;
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 25px;
     }
 
-    .date-badge {
-        font-size: 19px;
+    .date {
+      display: inline-block;
+      background: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 21px;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(100, 70, 40, 0.12);
     }
 
-    .dog-note {
-        align-items: flex-start;
+    /* 九日照片 */
+
+    .hero-dog {
+      width: 330px;
+      height: 330px;
+      flex-shrink: 0;
+
+      border-radius: 50%;
+      background: white;
+      padding: 12px;
+
+      box-shadow:
+        0 12px 35px rgba(90, 60, 40, 0.18);
+
+      position: relative;
+      z-index: 2;
     }
 
-    .dog-note-image {
-        width: 95px;
-        height: 95px;
+    .hero-dog img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      /* 避免九日的臉被裁掉 */
+      object-position: center 35%;
+
+      display: block;
     }
 
-    .dog-note-text h3 {
-        font-size: 23px;
+    /* =========================
+       Main
+    ========================= */
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 35px auto 80px;
     }
 
-    .dog-note-text p {
-        font-size: 18px;
+    /* =========================
+       Dog message
+    ========================= */
+
+    .dog-message {
+      background:
+        linear-gradient(
+          135deg,
+          #fff4d7,
+          #fffaf0
+        );
+
+      border-radius: 28px;
+      padding: 28px 35px;
+
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      margin-bottom: 35px;
+
+      border: 2px solid rgba(200, 111, 53, 0.08);
     }
 
-    .day-content {
-        padding: 25px 20px;
+    .dog-message-img {
+      width: 150px;
+      height: 150px;
+      flex-shrink: 0;
+
+      background: white;
+      padding: 8px;
+
+      border-radius: 24px;
+
+      box-shadow: 0 8px 20px rgba(100, 70, 40, 0.12);
     }
 
-    .day-title {
-        flex-direction: column;
+    .dog-message-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
 
-        align-items: flex-start;
+      border-radius: 18px;
     }
 
-    .day-title h2 {
-        font-size: 27px;
+    .dog-message h3 {
+      color: var(--brown);
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .dog-message p {
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       Tabs
+    ========================= */
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+
+      padding: 8px 5px 15px;
+      margin-bottom: 25px;
+
+      scrollbar-width: thin;
+    }
+
+    .tab {
+      border: none;
+      background: #eee2cb;
+
+      color: var(--brown);
+
+      min-width: 120px;
+      padding: 16px 20px;
+
+      border-radius: 18px;
+
+      font-size: 19px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab:hover {
+      transform: translateY(-2px);
+    }
+
+    .tab.active {
+      background: var(--brown);
+      color: white;
+
+      box-shadow:
+        0 8px 20px rgba(112, 67, 44, 0.25);
+    }
+
+    /* =========================
+       Day content
+    ========================= */
+
+    .day {
+      display: none;
+    }
+
+    .day.active {
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .day-header {
+      background: white;
+      border-radius: 28px;
+
+      padding: 30px 35px;
+      margin-bottom: 22px;
+
+      box-shadow:
+        0 10px 30px rgba(100, 70, 40, 0.08);
+
+      border-left: 8px solid var(--orange);
+    }
+
+    .day-header .date-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 5px;
+    }
+
+    .day-header h2 {
+      color: var(--brown);
+      font-size: 34px;
+      line-height: 1.3;
+    }
+
+    /* =========================
+       Timeline
+    ========================= */
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .timeline-item {
-        grid-template-columns: 1fr;
+      background: white;
 
-        gap: 5px;
+      border-radius: 22px;
+
+      padding: 22px 28px;
+
+      display: grid;
+      grid-template-columns: 120px 1fr;
+
+      gap: 20px;
+
+      box-shadow:
+        0 8px 25px rgba(100, 70, 40, 0.07);
+
+      border: 1px solid rgba(112, 67, 44, 0.05);
     }
 
     .time {
-        padding-left: 5px;
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--orange);
     }
+
+    .activity {
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .activity strong {
+      font-size: 23px;
+      color: var(--brown);
+    }
+
+    .note {
+      display: block;
+      margin-top: 5px;
+      font-size: 17px;
+      color: #78675c;
+    }
+
+    /* =========================
+       Klook
+    ========================= */
+
+    .klook-card {
+      margin-top: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff0d7,
+          #fff8eb
+        );
+
+      border-radius: 25px;
+
+      padding: 28px;
+
+      border: 2px dashed #d9955d;
+    }
+
+    .klook-card h3 {
+      color: var(--brown);
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .klook-card p {
+      font-size: 19px;
+      margin-bottom: 18px;
+    }
+
+    .klook-button {
+      display: inline-block;
+
+      background: #e56f35;
+      color: white;
+
+      text-decoration: none;
+
+      padding: 14px 25px;
+
+      border-radius: 15px;
+
+      font-size: 19px;
+      font-weight: 900;
+
+      transition: 0.2s;
+    }
+
+    .klook-button:hover {
+      transform: translateY(-2px);
+      background: #c85b28;
+    }
+
+    /* =========================
+       Shopping
+    ========================= */
 
     .shopping {
-        grid-template-columns: 1fr;
+      margin-top: 25px;
+
+      background: #f4f0e4;
+
+      border-radius: 25px;
+
+      padding: 28px;
     }
 
-    .home-card {
+    .shopping h3 {
+      color: var(--brown);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .shop {
+      background: white;
+
+      padding: 18px 20px;
+
+      border-radius: 16px;
+
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .shop span {
+      color: var(--orange);
+      font-size: 16px;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* =========================
+       Highlight
+    ========================= */
+
+    .highlight {
+      background: var(--green);
+
+      border-radius: 22px;
+
+      padding: 22px 26px;
+
+      margin-top: 22px;
+
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .highlight strong {
+      color: var(--brown);
+      font-size: 21px;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 45px 20px;
+
+      color: #806d60;
+
+      font-size: 17px;
+    }
+
+    footer .paw {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      body {
+        font-size: 17px;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding: 35px 25px 40px;
+
         flex-direction: column;
+        align-items: flex-start;
 
+        text-align: left;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero h2 {
+        font-size: 43px;
+      }
+
+      .subtitle {
+        font-size: 21px;
+      }
+
+      .hero-dog {
+        width: 250px;
+        height: 250px;
+
+        align-self: center;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      .dog-message {
+        flex-direction: column;
         text-align: center;
-    }
-}
 
-</style>
+        padding: 25px 20px;
+      }
+
+      .dog-message-img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .dog-message h3 {
+        font-size: 26px;
+      }
+
+      .dog-message p {
+        font-size: 19px;
+      }
+
+      .tab {
+        min-width: 105px;
+
+        padding: 14px 16px;
+
+        font-size: 17px;
+      }
+
+      .day-header {
+        padding: 25px 22px;
+      }
+
+      .day-header h2 {
+        font-size: 28px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+
+        padding: 20px;
+      }
+
+      .time {
+        font-size: 20px;
+      }
+
+      .activity {
+        font-size: 19px;
+      }
+
+      .activity strong {
+        font-size: 21px;
+      }
+
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<div class="container">
 
 <!-- =========================
      HERO
@@ -673,766 +630,966 @@ footer strong {
 
 <section class="hero">
 
-    <div class="hero-text">
+  <div class="hero-text">
 
-        <div class="small-title">
-            🐾 九日陪我們去旅行
-        </div>
-
-        <h1>OKINAWA</h1>
-
-        <h2>沖繩 2027</h2>
-
-        <div class="subtitle">
-            拔拔跟姊姊｜沖繩五日小旅行
-        </div>
-
-        <div class="date-badge">
-            📅 2027 / 01 / 06 ～ 01 / 10
-        </div>
-
+    <div class="small-title">
+      九日陪我們去旅行
     </div>
 
+    <h1>OKINAWA</h1>
 
-    <!-- 九日封面 -->
-    <div class="hero-dog">
+    <h2>沖繩 2027</h2>
 
-        <div class="hero-dog-frame">
-
-            <img
-                src="./images/kujitsu2.png"
-                alt="九日"
-            >
-
-        </div>
-
+    <div class="subtitle">
+      爸爸 × 姊姊｜沖繩五日小旅行
     </div>
+
+    <div class="date">
+      📅 2027 / 01 / 06 ～ 01 / 10
+    </div>
+
+  </div>
+
+  <div class="hero-dog">
+    <img
+      src="images/kujitsu.png"
+      alt="九日"
+    >
+  </div>
 
 </section>
 
 
 <!-- =========================
-     九日在家看家
+     MAIN
 ========================= -->
 
-<section class="dog-note">
+<main class="container">
 
-    <div class="dog-note-image">
 
-        <img
-            src="./images/kujitsu.png"
-            alt="九日在家看家"
-        >
+  <!-- 九日公告 -->
+
+  <section class="dog-message">
+
+    <div class="dog-message-img">
+      <img
+        src="images/kujitsu2.png"
+        alt="九日"
+      >
+    </div>
+
+    <div>
+
+      <h3>
+        🐕 九日：你們去玩吧！
+      </h3>
+
+      <p>
+        拔拔跟姊姊出去玩，<br>
+        九日沒有要去旅行，要乖乖在家看家！🏠
+      </p>
 
     </div>
 
-    <div class="dog-note-text">
-
-        <h3>🐕 九日：你們去玩吧！</h3>
-
-        <p>
-            拔拔跟姊姊要去沖繩玩囉～<br>
-            九日這次沒有要一起去旅行，<br>
-            要乖乖在家看家、等我們回來！
-        </p>
-
-    </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     TAB
-========================= -->
+  <!-- =========================
+       TABS
+  ========================= -->
 
-<div class="tabs">
+  <nav class="tabs">
 
-    <button class="tab active" onclick="showDay('day1', this)">
-        1/6<br>抵達沖繩
+    <button
+      class="tab active"
+      onclick="showDay('day1', this)"
+    >
+      1/6（三）
     </button>
 
-    <button class="tab" onclick="showDay('day2', this)">
-        1/7<br>北部一日遊
+    <button
+      class="tab"
+      onclick="showDay('day2', this)"
+    >
+      1/7（四）
     </button>
 
-    <button class="tab" onclick="showDay('day3', this)">
-        1/8<br>首里＋購物
+    <button
+      class="tab"
+      onclick="showDay('day3', this)"
+    >
+      1/8（五）
     </button>
 
-    <button class="tab" onclick="showDay('day4', this)">
-        1/9<br>南部一日遊
+    <button
+      class="tab"
+      onclick="showDay('day4', this)"
+    >
+      1/9（六）
     </button>
 
-    <button class="tab" onclick="showDay('day5', this)">
-        1/10<br>回家
+    <button
+      class="tab"
+      onclick="showDay('day5', this)"
+    >
+      1/10（日）
     </button>
 
-</div>
+  </nav>
 
 
-<!-- =========================
-     DAY 1
-========================= -->
+  <!-- ==================================================
+       DAY 1
+  ================================================== -->
 
-<section id="day1" class="day-content active">
+  <section id="day1" class="day active">
 
-    <div class="day-title">
+    <div class="day-header">
 
-        <span class="date">1/6</span>
+      <div class="date-title">
+        DAY 1｜2027 / 01 / 06（三）
+      </div>
 
-        <h2>抵達沖繩｜國際通逛街</h2>
-
-    </div>
-
-    <div class="intro">
-
-        ✈️ 今天是旅行開始日！
-        抵達那霸後先到飯店放行李，
-        晚上就在國際通附近輕鬆吃飯、逛街。
+      <h2>
+        ✈️ 抵達沖繩 → 國際通 → 燒肉
+      </h2>
 
     </div>
 
 
     <div class="timeline">
 
-        <div class="timeline-item">
+      <div class="timeline-item">
 
-            <div class="time">09:45</div>
+        <div class="time">
+          09:45
+        </div>
 
-            <div class="activity">
+        <div class="activity">
 
-                <h3>✈️ 台中 → 沖繩</h3>
+          ✈️
+          <strong>
+            台中機場 → 那霸機場
+          </strong>
 
-                <p>
-                    桃園不是這次的出發地喔～<br>
-                    本次是 <strong>台中國際機場 RMQ</strong>
-                    出發。
-                </p>
-
-            </div>
+          <span class="note">
+            桃園不是這次出發地！這趟是從台中 RMQ 出發。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">12:15</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          12:15
+        </div>
 
-                <h3>🛬 抵達那霸機場</h3>
+        <div class="activity">
 
-                <p>
-                    抵達沖繩那霸機場 OKA。
-                </p>
+          🛬
+          <strong>
+            抵達那霸機場
+          </strong>
 
-            </div>
+          <span class="note">
+            入境、領行李後前往飯店。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">下午</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          下午
+        </div>
 
-                <h3>🏨 飯店 Check-in</h3>
+        <div class="activity">
 
-                <p>
-                    沖繩那霸柔婕閣飯店<br>
-                    La'gent Hotel Okinawa Naha
-                </p>
+          🏨
+          <strong>
+            La'gent Hotel Okinawa Naha
+          </strong>
 
-            </div>
+          <span class="note">
+            抵達飯店、放行李、稍微休息。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">18:00</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          15:30～
+        </div>
 
-                <h3>🥩 晚餐｜焼肉きんぐ 那覇久茂地店</h3>
+        <div class="activity">
 
-                <p>
-                    第一晚吃燒肉！<br>
-                    吃完可以再慢慢逛國際通。
-                </p>
+          🌺
+          <strong>
+            國際通散步
+          </strong>
 
-            </div>
+          <span class="note">
+            輕鬆逛街，不安排太多景點。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">晚上</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          18:00～18:30
+        </div>
 
-                <h3>🛍️ 國際通</h3>
+        <div class="activity">
 
-                <p>
-                    可以逛 Don Quijote、藥妝店，
-                    也可以順便買九日的東西 🐕
-                </p>
+          🥩
+          <strong>
+            焼肉きんぐ 那覇久茂地店
+          </strong>
 
-            </div>
+          <span class="note">
+            第一晚吃燒肉，吃飽再慢慢逛。
+          </span>
 
         </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          晚上
+        </div>
+
+        <div class="activity">
+
+          🛍️
+          <strong>
+            國際通／Don Quijote
+          </strong>
+
+          <span class="note">
+            藥妝、零食、伴手禮，也可以看看九日的東西。
+          </span>
+
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     DAY 2
-========================= -->
+  <!-- ==================================================
+       DAY 2
+  ================================================== -->
 
-<section id="day2" class="day-content">
+  <section id="day2" class="day">
 
-    <div class="day-title">
+    <div class="day-header">
 
-        <span class="date">1/7</span>
+      <div class="date-title">
+        DAY 2｜2027 / 01 / 07（四）
+      </div>
 
-        <h2>北部一日遊｜美麗海水族館</h2>
-
-    </div>
-
-
-    <div class="intro">
-
-        🚌 今天直接跟 Klook 一日遊，
-        不用自己研究交通，跟著車走就好！
-
-    </div>
-
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <div class="time">08:20</div>
-
-            <div class="activity">
-
-                <h3>🚌 集合</h3>
-
-                <p>
-                    BLUE SEAL Kumoji 店<br>
-                    RYUBO 百貨附近
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">上午</div>
-
-            <div class="activity">
-
-                <h3>🌊 萬座毛</h3>
-
-                <p>
-                    欣賞沖繩經典海岸景色。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">上午</div>
-
-            <div class="activity">
-
-                <h3>🌴 古宇利島</h3>
-
-                <p>
-                    看海、拍照、走走。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">下午</div>
-
-            <div class="activity">
-
-                <h3>🐠 美麗海水族館</h3>
-
-                <p>
-                    沖繩代表景點！
-                </p>
-
-                <p style="margin-top:10px;">
-                    ⚠️ 這次旅程期間海豚劇場正在維修，
-                    所以 1/7 不安排海豚表演。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">傍晚</div>
-
-            <div class="activity">
-
-                <h3>🌆 美國村</h3>
-
-                <p>
-                    逛街、吃東西、拍照。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">晚上</div>
-
-            <div class="activity">
-
-                <h3>🍜 晚餐｜ゆうなんぎい</h3>
-
-                <p>
-                    回到那霸縣廳前附近後吃飯。
-                </p>
-
-                <a
-                    class="klook-btn"
-                    href="https://www.klook.com/zh-TW/activity/19157-north-okinawa-okinawa-churaumi-aquarium-cape-manza-join-bus-tour/"
-                    target="_blank"
-                >
-                    查看北部 Klook 行程 →
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     DAY 3
-========================= -->
-
-<section id="day3" class="day-content">
-
-    <div class="day-title">
-
-        <span class="date">1/8</span>
-
-        <h2>首里散步＋Main Place 購物日</h2>
-
-    </div>
-
-
-    <div class="intro">
-
-        🛍️ 今天是主要購物日！
-        早上先去首里，
-        下午直接到 SAN-A 那霸 Main Place 大採購。
+      <h2>
+        🐳 北部 Klook 一日遊
+      </h2>
 
     </div>
 
 
     <div class="timeline">
 
-        <div class="timeline-item">
+      <div class="timeline-item">
 
-            <div class="time">上午</div>
+        <div class="time">
+          08:20
+        </div>
 
-            <div class="activity">
+        <div class="activity">
 
-                <h3>🙏 西來院／達磨寺</h3>
+          🚌
+          <strong>
+            BLUE SEAL Kumoji 集合
+          </strong>
 
-                <p>
-                    沖繩達磨寺，
-                    順路參觀、拍拍照。
-                </p>
-
-            </div>
+          <span class="note">
+            RYUBO 百貨附近，準備參加 Klook 北部一日遊。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">上午</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          上午
+        </div>
 
-                <h3>🏯 首里城</h3>
+        <div class="activity">
 
-                <p>
-                    參觀沖繩代表性的歷史景點。
-                </p>
-
-            </div>
+          🌊
+          <strong>
+            萬座毛
+          </strong>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">中午</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          上午～中午
+        </div>
 
-                <h3>🍜 首里沖繩麵</h3>
+        <div class="activity">
 
-                <p>
-                    午餐吃沖繩麵。
-                </p>
-
-            </div>
+          🏝️
+          <strong>
+            古宇利島
+          </strong>
 
         </div>
 
-
-        <div class="timeline-item">
-
-            <div class="time">下午</div>
-
-            <div class="activity">
-
-                <h3>🛍️ SAN-A 那霸 Main Place</h3>
-
-                <p>
-                    今天主要購物地點！
-                </p>
+      </div>
 
 
-                <div class="shopping">
+      <div class="timeline-item">
 
-                    <div class="shop-card">
+        <div class="time">
+          下午
+        </div>
 
-                        <h3>👟 運動用品</h3>
+        <div class="activity">
 
-                        <p>
-                            BUNRINDO SPORTS<br>
-                            Murasaki Sports
-                        </p>
+          🐋
+          <strong>
+            美麗海水族館
+          </strong>
 
-                    </div>
-
-
-                    <div class="shop-card">
-
-                        <h3>👕 UNIQLO</h3>
-
-                        <p>
-                            買衣服、日常服飾。
-                        </p>
-
-                    </div>
-
-
-                    <div class="shop-card">
-
-                        <h3>🧺 MUJI</h3>
-
-                        <p>
-                            無印良品。
-                        </p>
-
-                    </div>
-
-
-                    <div class="shop-card">
-
-                        <h3>🎀 Sanrio</h3>
-
-                        <p>
-                            Sanrio Gift Gate。
-                        </p>
-
-                    </div>
-
-
-                    <div class="shop-card">
-
-                        <h3>👟 ABC-MART</h3>
-
-                        <p>
-                            鞋子、運動鞋。
-                        </p>
-
-                    </div>
-
-
-                    <div class="shop-card">
-
-                        <h3>🍽️ 晚餐</h3>
-
-                        <p>
-                            晚餐到 Main Place
-                            看當天想吃什麼再決定！
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
+          <span class="note">
+            ⚠️ 2027/1/4～1/9 海豚秀因設施維修暫停。
+            水族館本身仍是行程重點。
+          </span>
 
         </div>
 
-    </div>
-
-</section>
+      </div>
 
 
-<!-- =========================
-     DAY 4
-========================= -->
+      <div class="timeline-item">
 
-<section id="day4" class="day-content">
+        <div class="time">
+          下午
+        </div>
 
-    <div class="day-title">
+        <div class="activity">
 
-        <span class="date">1/9</span>
+          🇺🇸
+          <strong>
+            美國村
+          </strong>
 
-        <h2>南部一日遊</h2>
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          晚上
+        </div>
+
+        <div class="activity">
+
+          🍽️
+          <strong>
+            ゆうなんぎい
+          </strong>
+
+          <span class="note">
+            回到那霸縣廳前附近後吃晚餐。
+          </span>
+
+        </div>
+
+      </div>
+
 
     </div>
 
 
-    <div class="intro">
+    <div class="klook-card">
 
-        🚌 今天一樣跟 Klook 一日遊，
-        前往沖繩南部景點。
-    </div>
+      <h3>
+        🚌 今日 Klook 行程
+      </h3>
 
+      <p>
+        北沖繩・美麗海水族館・萬座毛一日遊
+      </p>
 
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <div class="time">上午</div>
-
-            <div class="activity">
-
-                <h3>🌊 知念岬</h3>
-
-                <p>
-                    看海景、拍照。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">上午</div>
-
-            <div class="activity">
-
-                <h3>🏖️ 新原海灘</h3>
-
-                <p>
-                    欣賞沖繩南部海岸。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">下午</div>
-
-            <div class="activity">
-
-                <h3>鍾乳洞／玉泉洞</h3>
-
-                <p>
-                    探索沖繩南部特色景點。
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">下午</div>
-
-            <div class="activity">
-
-                <h3>🌴 瀨長島</h3>
-
-                <p>
-                    最後再去瀨長島走走、
-                    吃東西、看夕陽。
-                </p>
-
-                <a
-                    class="klook-btn"
-                    href="https://www.klook.com/zh-TW/activity/149365-chinen-cape-mibaru-beach-gyokusendo-cave-senaga-island-day-tour/"
-                    target="_blank"
-                >
-                    查看南部 Klook 行程 →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="time">晚上</div>
-
-            <div class="activity">
-
-                <h3>🍽️ 晚餐</h3>
-
-                <p>
-                    看當天體力再決定！
-                    如果很累就回飯店附近吃。
-                </p>
-
-            </div>
-
-        </div>
+      <a
+        class="klook-button"
+        href="https://www.klook.com/zh-TW/activity/19157-north-okinawa-okinawa-churaumi-aquarium-cape-manza-join-bus-tour/"
+        target="_blank"
+      >
+        查看 Klook 行程 ↗
+      </a>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- =========================
-     DAY 5
-========================= -->
+  <!-- ==================================================
+       DAY 3
+  ================================================== -->
 
-<section id="day5" class="day-content">
+  <section id="day3" class="day">
 
-    <div class="day-title">
+    <div class="day-header">
 
-        <span class="date">1/10</span>
+      <div class="date-title">
+        DAY 3｜2027 / 01 / 08（五）
+      </div>
 
-        <h2>回家囉！</h2>
-
-    </div>
-
-
-    <div class="intro">
-
-        🧳 最後一天不用安排景點，
-        悠閒吃早餐、整理行李，
-        然後前往那霸機場。
+      <h2>
+        🏯 首里古城 → PARCO CITY 購物
+      </h2>
 
     </div>
 
 
     <div class="timeline">
 
-        <div class="timeline-item">
+      <div class="timeline-item">
 
-            <div class="time">上午</div>
+        <div class="time">
+          09:00
+        </div>
 
-            <div class="activity">
+        <div class="activity">
 
-                <h3>☕ 早餐＋整理行李</h3>
-
-                <p>
-                    悠閒吃早餐，
-                    確認護照、行李、伴手禮。
-                </p>
-
-            </div>
+          🚶
+          <strong>
+            飯店出發
+          </strong>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">中午前</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          09:30～10:15
+        </div>
 
-                <h3>🛬 前往那霸機場</h3>
+        <div class="activity">
 
-                <p>
-                    預留充足時間辦理登機。
-                </p>
+          🐕
+          <strong>
+            西來院／達磨寺
+          </strong>
 
-            </div>
+          <span class="note">
+            首里一帶的達磨寺，先安排比較輕鬆的行程。
+          </span>
 
         </div>
 
+      </div>
 
-        <div class="timeline-item">
 
-            <div class="time">13:15</div>
+      <div class="timeline-item">
 
-            <div class="activity">
+        <div class="time">
+          10:20～11:40
+        </div>
 
-                <h3>✈️ 沖繩 → 台中</h3>
+        <div class="activity">
 
-                <p>
-                    回台中囉！
-                </p>
-
-            </div>
+          🏯
+          <strong>
+            首里城
+          </strong>
 
         </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          11:50～12:50
+        </div>
+
+        <div class="activity">
+
+          🍜
+          <strong>
+            首里沖繩麵
+          </strong>
+
+          <span class="note">
+            午餐不要拖太晚，避免熱門店家售罄。
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          約 13:00
+        </div>
+
+        <div class="activity">
+
+          🚌
+          <strong>
+            首里 → PARCO CITY
+          </strong>
+
+          <span class="note">
+            搭公車前往浦添西海岸。
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          約 14:00
+        </div>
+
+        <div class="activity">
+
+          🛍️
+          <strong>
+            PARCO CITY
+          </strong>
+
+          <span class="note">
+            今天下午主要就是購物，不再安排 SAN-A Naha Main Place。
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          18:00～19:00
+        </div>
+
+        <div class="activity">
+
+          🍽️
+          <strong>
+            PARCO CITY 晚餐
+          </strong>
+
+          <span class="note">
+            逛累了直接在 PARCO CITY 裡面吃。
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          晚上
+        </div>
+
+        <div class="activity">
+
+          🚌
+          <strong>
+            回那霸飯店
+          </strong>
+
+        </div>
+
+      </div>
 
     </div>
 
 
-    <!-- 九日 -->
-    <div class="home-card">
+    <!-- PARCO CITY -->
 
-        <img
-            src="./images/kujitsu.png"
-            alt="九日在家看家"
-        >
+    <div class="shopping">
 
-        <div>
+      <h3>
+        🛍️ PARCO CITY 購物清單
+      </h3>
 
-            <h3>🐕 九日：你們終於回來啦！</h3>
 
-            <p>
-                九日乖乖在家看家五天，<br>
-                等拔拔跟姊姊回來抱抱 ❤️
-            </p>
+      <div class="shop-grid">
 
+        <div class="shop">
+          👕 UNIQLO
+          <span>3F｜服飾</span>
         </div>
+
+        <div class="shop">
+          👕 GU
+          <span>2F｜服飾</span>
+        </div>
+
+        <div class="shop">
+          🧺 無印良品
+          <span>3F｜生活雜貨、服飾</span>
+        </div>
+
+        <div class="shop">
+          👟 ABC-MART
+          <span>2F｜鞋類</span>
+        </div>
+
+        <div class="shop">
+          👟 ABC-MART GRANDSTAGE
+          <span>3F｜鞋類、服飾</span>
+        </div>
+
+        <div class="shop">
+          🏃 OSHMAN'S
+          <span>3F｜運動、戶外</span>
+        </div>
+
+        <div class="shop">
+          🏄 ムラサキスポーツ
+          <span>2F｜運動、戶外</span>
+        </div>
+
+        <div class="shop">
+          💄 松本清
+          <span>藥妝、美妝</span>
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+
+    <div class="highlight">
+
+      <strong>
+        💡 今天的購物重點
+      </strong>
+
+      <br>
+
+      UNIQLO、GU、MUJI、ABC-MART、
+      運動用品一次集中買。
+
+      <br>
+
+      不需要再特別跑 Main Place。
+
+    </div>
+
+  </section>
 
 
-</div>
+  <!-- ==================================================
+       DAY 4
+  ================================================== -->
+
+  <section id="day4" class="day">
+
+    <div class="day-header">
+
+      <div class="date-title">
+        DAY 4｜2027 / 01 / 09（六）
+      </div>
+
+      <h2>
+        🌊 南沖繩 Klook 一日遊
+      </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="time">
+          上午
+        </div>
+
+        <div class="activity">
+
+          🌊
+          <strong>
+            知念岬
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          上午
+        </div>
+
+        <div class="activity">
+
+          🏖️
+          <strong>
+            新原海灘
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          下午
+        </div>
+
+        <div class="activity">
+
+          🪨
+          <strong>
+            玉泉洞／沖繩世界
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          下午
+        </div>
+
+        <div class="activity">
+
+          🌴
+          <strong>
+            瀨長島
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          晚上
+        </div>
+
+        <div class="activity">
+
+          🍽️
+          <strong>
+            回那霸後再決定晚餐
+          </strong>
+
+          <span class="note">
+            今天跑一整天，不預先塞固定餐廳，看爸爸跟姊姊的體力再決定。
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="klook-card">
+
+      <h3>
+        🚌 今日 Klook 行程
+      </h3>
+
+      <p>
+        知念岬・新原海灘・玉泉洞・瀨長島一日遊
+      </p>
+
+      <a
+        class="klook-button"
+        href="https://www.klook.com/zh-TW/activity/149365-chinen-cape-mibaru-beach-gyokusendo-cave-senaga-island-day-tour/"
+        target="_blank"
+      >
+        查看 Klook 行程 ↗
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       DAY 5
+  ================================================== -->
+
+  <section id="day5" class="day">
+
+    <div class="day-header">
+
+      <div class="date-title">
+        DAY 5｜2027 / 01 / 10（日）
+      </div>
+
+      <h2>
+        ✈️ 回家
+      </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="time">
+          上午
+        </div>
+
+        <div class="activity">
+
+          🍳
+          <strong>
+            早餐
+          </strong>
+
+          <span class="note">
+            最後慢慢吃早餐，不安排景點。
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          10:00 左右
+        </div>
+
+        <div class="activity">
+
+          🧳
+          <strong>
+            飯店退房
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          上午
+        </div>
+
+        <div class="activity">
+
+          🚌
+          <strong>
+            前往那霸機場
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          13:15
+        </div>
+
+        <div class="activity">
+
+          ✈️
+          <strong>
+            那霸 → 台中
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="time">
+          14:00
+        </div>
+
+        <div class="activity">
+
+          🏠
+          <strong>
+            抵達台中
+          </strong>
+
+          <span class="note">
+            九日：你們終於回來了吧！🐕
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
 
 
 <!-- =========================
@@ -1441,58 +1598,66 @@ footer strong {
 
 <footer>
 
-    🐾 <strong>九日陪我們去旅行</strong> 🐾<br>
+  <div class="paw">
+    🐾 🐕 🐾
+  </div>
 
-    拔拔跟姊姊的沖繩五日小旅行<br>
+  <div>
+    OKINAWA 2027
+  </div>
 
-    2027 / 01 / 06 ～ 01 / 10
+  <div>
+    拔拔 × 姊姊｜九日在家看家
+  </div>
 
 </footer>
 
 
 <!-- =========================
-     TAB JS
+     TAB SCRIPT
 ========================= -->
 
 <script>
 
-function showDay(dayId, button) {
+  function showDay(dayId, button) {
 
-    // 隱藏所有日期
-    const days = document.querySelectorAll(".day-content");
+    // 隱藏所有天數
+    const days = document.querySelectorAll(".day");
 
     days.forEach(function(day) {
-
-        day.classList.remove("active");
-
+      day.classList.remove("active");
     });
 
 
-    // 移除所有 Tab active
+    // 移除所有 Tab 的 active
     const tabs = document.querySelectorAll(".tab");
 
     tabs.forEach(function(tab) {
-
-        tab.classList.remove("active");
-
+      tab.classList.remove("active");
     });
 
 
-    // 顯示選中的日期
-    document.getElementById(dayId).classList.add("active");
+    // 顯示選中的天數
+    const selectedDay = document.getElementById(dayId);
+
+    if (selectedDay) {
+      selectedDay.classList.add("active");
+    }
 
 
-    // 標記目前 Tab
-    button.classList.add("active");
+    // 選中的 Tab
+    if (button) {
+      button.classList.add("active");
+    }
 
 
-    // 回到內容區上方
-    document.querySelector(".tabs").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    // 切換後回到內容上方
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
 
-}
+  }
 
 </script>
 
